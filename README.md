@@ -59,8 +59,6 @@ Things you may want to cover:
 
 ### Association
 
-- has_one :items_buyers
-- has_one :buyers
 - belongs_to :user
 
 ## buyers テーブル
@@ -74,11 +72,10 @@ Things you may want to cover:
 | building_name   | string     |                                |
 | phone_number    | integer    | null: false                    |
 | user            | references | null: false, foreign_key: true |
-| item            | references | null: false, foreign_key: true |
+| items_buyers    | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :buyer
 - belongs_to :items_buyers
 
 ## items_buyers テーブル
