@@ -41,7 +41,6 @@ Things you may want to cover:
 ### Association
 
 - has many :items
-- has many :buyers
 - has many :items_buyers
 
 ## items テーブル
@@ -60,7 +59,7 @@ Things you may want to cover:
 
 ### Association
 
-- has many :items_buyers
+- has one :items_buyers
 - has one :buyers
 - belongs_to :user
 
@@ -68,10 +67,10 @@ Things you may want to cover:
 
 | Colum           | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
-| postal_cpde     | integer    | null: false                    |
+| postal_cpde     | string     | null: false                    |
 | prefecture      | integer    | null: false                    |
 | city            | string     | null: false                    |
-| house_number    | integer    | null: false                    |
+| house_number    | strind     | null: false                    |
 | building_name   | string     |                                |
 | phone_number    | integer    | null: false                    |
 | user            | references | null: false, foreign_key: true |
