@@ -40,8 +40,8 @@ Things you may want to cover:
 
 ### Association
 
-- has many :items
-- has many :items_buyers
+- has_many :items
+- has_many :items_buyers
 
 ## items テーブル
 
@@ -59,15 +59,15 @@ Things you may want to cover:
 
 ### Association
 
-- has one :items_buyers
-- has one :buyers
+- has_one :items_buyers
+- has_one :buyers
 - belongs_to :user
 
 ## buyers テーブル
 
 | Colum           | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
-| postal_cpde     | string     | null: false                    |
+| postal_code     | string     | null: false                    |
 | prefecture      | integer    | null: false                    |
 | city            | string     | null: false                    |
 | house_number    | strind     | null: false                    |
@@ -78,7 +78,7 @@ Things you may want to cover:
 
 ### Association
 
-- has many :items_buyers
+- belongs_to :buyer
 - belongs_to :items_buyers
 
 ## items_buyers テーブル
@@ -90,7 +90,7 @@ Things you may want to cover:
 
 ### Association
 
-- has one :buyers
+- has_one :buyer
 - belongs_to :user
 - belongs_to :item
 
