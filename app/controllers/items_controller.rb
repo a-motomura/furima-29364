@@ -16,6 +16,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    @item = Item.find(params[:id])
+    user = User.find(params[:id])
+    @nickname = user.nickname
+  end
+
   private
 
   def item_params
