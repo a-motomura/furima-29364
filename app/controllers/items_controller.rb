@@ -22,6 +22,14 @@ class ItemsController < ApplicationController
     @nickname = user.nickname
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+    item.update(item_params)
+
   private
 
   def item_params
