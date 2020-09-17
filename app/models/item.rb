@@ -1,6 +1,6 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  has_one :users_items
+  has_many :users_items
   belongs_to :user
   has_one_attached :image
   belongs_to_active_hash :category
@@ -13,7 +13,7 @@ class Item < ApplicationRecord
     validates :image, :name, :introduction, :category_id, :status_id, :postage_id, :prefecture_id, :preparation_day_id
     validates :price, format: { with: /\A[0-9]+\z/, message: 'is invalid. Input half-width characters.' }
   end
-  
+
   validates :category_id, :status_id, :postage_id, :prefecture_id, :preparation_day_id, numericality: { other_than: 0, message: "can't be blank" }
   validates :name, length: { maximum: 40 }
   validates :introduction, length: { maximum: 1000 }
