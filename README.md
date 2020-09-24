@@ -62,7 +62,7 @@ Things you may want to cover:
 - has_one :users_item
 - belongs_to :user
 
-## buyers テーブル
+## orders テーブル
 
 | Colum           | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
@@ -87,6 +87,6 @@ Things you may want to cover:
 
 ### Association
 
-- has_one :buyer
+- has_one :order
 - belongs_to :user
 - belongs_to :item
