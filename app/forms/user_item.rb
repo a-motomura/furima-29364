@@ -8,6 +8,7 @@ class UserItem
   end
 
   validates :prefecture_id, numericality: { other_than: 0, message: "can't be blank" }
+  validates :phone_number, length: { maximum: 11 }
 
   def save
     @users_item = UsersItem.create(user_id: user_id, item_id: item_id)
