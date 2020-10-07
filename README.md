@@ -76,7 +76,7 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :users_items
+- belongs_to :users_item
 
 ## users_items テーブル
 
